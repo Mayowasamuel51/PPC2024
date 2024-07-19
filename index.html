@@ -100,7 +100,10 @@
                     .querySelectorAll(".splide__slide .text-content")
                     .forEach(function (content) {
                         content.classList.remove("fade-in-up");
-                    });
+                });
+                document.querySelectorAll('.splide__slide').forEach(function (slide) {
+                    slide.classList.remove('zoom-in');
+                });
 
                 // Add animation class to the active slide
                 let activeSlide = splide.Components.Elements.slides[splide.index];
@@ -108,6 +111,7 @@
                 if (textContent) {
                     textContent.classList.add("fade-in-up");
                 }
+                activeSlide.classList.add('zoom-in');
             });
             splide.mount();
         });

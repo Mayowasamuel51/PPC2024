@@ -731,6 +731,21 @@ video {
   animation-fill-mode: backwards;
 }
 
+@keyframes zoomIn {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.zoom-in {
+  animation: zoomIn 5s ease-out;
+  animation-fill-mode: forwards;
+}
+
 @media (min-width: 768px){
   .md\:px-14{
     padding-left: 3.5rem;
