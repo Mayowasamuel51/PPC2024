@@ -677,20 +677,16 @@ video {
   gap: 2.5rem;
 }
 
+.gap-2{
+  gap: 0.5rem;
+}
+
 .gap-3{
   gap: 0.75rem;
 }
 
 .gap-5{
   gap: 1.25rem;
-}
-
-.gap-6{
-  gap: 1.5rem;
-}
-
-.gap-2{
-  gap: 0.5rem;
 }
 
 .rounded-full{
@@ -721,6 +717,11 @@ video {
   border-color: rgb(244 198 31 / var(--tw-border-opacity));
 }
 
+.bg-\[\#00091f\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 9 31 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#424242\]{
   --tw-bg-opacity: 1;
   background-color: rgb(66 66 66 / var(--tw-bg-opacity));
@@ -734,16 +735,6 @@ video {
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#333\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(51 51 51 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#00091f\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 9 31 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-30{
@@ -817,6 +808,15 @@ video {
   line-height: 2.5rem;
 }
 
+.text-\[13px\]{
+  font-size: 13px;
+}
+
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
 .text-sm{
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -825,10 +825,6 @@ video {
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-\[13px\]{
-  font-size: 13px;
 }
 
 .font-bold{
@@ -859,6 +855,11 @@ video {
   letter-spacing: 0.05em;
 }
 
+.text-\[\#0a84b7\]{
+  --tw-text-opacity: 1;
+  color: rgb(10 132 183 / var(--tw-text-opacity));
+}
+
 .text-\[\#2eb161\]{
   --tw-text-opacity: 1;
   color: rgb(46 177 97 / var(--tw-text-opacity));
@@ -872,6 +873,11 @@ video {
 .text-\[\#58bbd5\]{
   --tw-text-opacity: 1;
   color: rgb(88 187 213 / var(--tw-text-opacity));
+}
+
+.text-\[\#b3adad\]{
+  --tw-text-opacity: 1;
+  color: rgb(179 173 173 / var(--tw-text-opacity));
 }
 
 .text-\[\#b3b3b3\]{
@@ -902,16 +908,6 @@ video {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-\[\#0a84b7\]{
-  --tw-text-opacity: 1;
-  color: rgb(10 132 183 / var(--tw-text-opacity));
-}
-
-.text-\[\#b3adad\]{
-  --tw-text-opacity: 1;
-  color: rgb(179 173 173 / var(--tw-text-opacity));
 }
 
 .duration-300{
@@ -1046,6 +1042,11 @@ video {
   .md\:py-4{
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
+
+  .md\:py-6{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 
   .md\:text-3xl{
