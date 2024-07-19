@@ -558,6 +558,10 @@ video {
   --tw-contain-style:  ;
 }
 
+.invisible{
+  visibility: hidden;
+}
+
 .absolute{
   position: absolute;
 }
@@ -586,6 +590,10 @@ video {
   top: 50%;
 }
 
+.top-10{
+  top: 2.5rem;
+}
+
 .z-10{
   z-index: 10;
 }
@@ -598,6 +606,10 @@ video {
 .my-2{
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+.block{
+  display: block;
 }
 
 .flex{
@@ -636,6 +648,10 @@ video {
   width: 6rem;
 }
 
+.w-\[150px\]{
+  width: 150px;
+}
+
 .w-full{
   width: 100%;
 }
@@ -651,6 +667,10 @@ video {
 
 .cursor-grab{
   cursor: grab;
+}
+
+.cursor-pointer{
+  cursor: pointer;
 }
 
 .grid-cols-1{
@@ -699,6 +719,17 @@ video {
 
 .gap-8{
   gap: 2rem;
+}
+
+.divide-y > :not([hidden]) ~ :not([hidden]){
+  --tw-divide-y-reverse: 0;
+  border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
+  border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
+}
+
+.divide-black > :not([hidden]) ~ :not([hidden]){
+  --tw-divide-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-divide-opacity));
 }
 
 .rounded-full{
@@ -785,6 +816,10 @@ video {
 
 .p-16{
   padding: 4rem;
+}
+
+.p-3{
+  padding: 0.75rem;
 }
 
 .px-10{
@@ -946,6 +981,11 @@ video {
   color: rgb(244 198 31 / var(--tw-text-opacity));
 }
 
+.text-black{
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
 .text-blue-600{
   --tw-text-opacity: 1;
   color: rgb(37 99 235 / var(--tw-text-opacity));
@@ -954,6 +994,14 @@ video {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.opacity-0{
+  opacity: 0;
+}
+
+.duration-200{
+  transition-duration: 200ms;
 }
 
 .duration-300{
@@ -1031,6 +1079,15 @@ video {
   border-color: rgb(249 249 249 / var(--tw-border-opacity));
 }
 
+.hover\:bg-black:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-opacity-10:hover{
+  --tw-bg-opacity: 0.1;
+}
+
 .hover\:text-\[\#b1dde9\]:hover{
   --tw-text-opacity: 1;
   color: rgb(177 221 233 / var(--tw-text-opacity));
@@ -1051,9 +1108,21 @@ video {
   color: rgb(249 249 249 / var(--tw-text-opacity));
 }
 
+.group:hover .group-hover\:visible{
+  visibility: visible;
+}
+
+.group:hover .group-hover\:opacity-100{
+  opacity: 1;
+}
+
 @media (min-width: 768px){
   .md\:block{
     display: block;
+  }
+
+  .md\:hidden{
+    display: none;
   }
 
   .md\:min-h-screen{
@@ -1095,11 +1164,6 @@ video {
   .md\:py-32{
     padding-top: 8rem;
     padding-bottom: 8rem;
-  }
-
-  .md\:py-4{
-    padding-top: 1rem;
-    padding-bottom: 1rem;
   }
 
   .md\:text-left{

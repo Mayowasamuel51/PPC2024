@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <header class="z-10 absolute top-0 right-0 left-0 w-full flex items-center justify-around py-2 px-4 md:px-16 md:py-4 bg-blue-500 bg-opacity-20">
+    <header class="z-10 absolute top-0 right-0 left-0 w-full flex items-center justify-around px-4 md:px-16 bg-blue-500 bg-opacity-20">
         <div class="md:block flex justify-center">
             <div class="flex items-center gap-3">
                 <div>
@@ -27,22 +27,37 @@
                 </div>
             </div>
         </div>
+        <div class="md:hidden block">
+            <i class="fa-solid fa-bars"></i>
+        </div>
         <div class="md:block hidden">
             <nav>
                 <ul class="flex items-center gap-8 text-sm font-normal text-white">
-                    <li><p>ABOUT</p></li>
-                    <li><p>SERVICES</p></li>
-                    <li><p>MINISTRIES</p></li>
-                    <li><p>DEPARTMENTS</p></li>
-                    <li class="flex items-start gap-2">
+                    <li class="p-3 cursor-pointer"><p>ABOUT</p></li>
+                    <li class="p-3 cursor-pointer"><p>SERVICES</p></li>
+                    <li class="p-3 cursor-pointer"><p>MINISTRIES</p></li>
+                    <li class="p-3 cursor-pointer"><p>DEPARTMENTS</p></li>
+                    <li class="group p-3 cursor-pointer relative flex items-start gap-2">
                         <p>MEDIA</p>
                         <i class="fa-solid fa-sort-down"></i>
+                        <ul class="group-hover:opacity-100 group-hover:visible opacity-0 invisible duration-300 text-sm absolute left-0 top-10 bg-white text-black divide-y divide-black w-[150px] text-center">
+                            <li class="p-3 cursor-pointer hover:bg-black hover:bg-opacity-10 duration-200">WATCH LIVE</li>
+                            <li class="p-3 cursor-pointer hover:bg-black hover:bg-opacity-10 duration-200">Videos</li>
+                            <li class="p-3 cursor-pointer hover:bg-black hover:bg-opacity-10 duration-200">Photo Gallery</li>
+                            <li class="p-3 cursor-pointer hover:bg-black hover:bg-opacity-10 duration-200">Sermons Podcast</li>
+                        </ul>
                     </li>
-                    <li class="flex items-start gap-2">
+                    <li class="group p-3 cursor-pointer relative flex items-start gap-2">
                         <p>RESOURSES</p>
                         <i class="fa-solid fa-sort-down"></i>
+                        <ul class="group-hover:opacity-100 group-hover:visible opacity-0 invisible duration-300 text-sm absolute left-0 top-10 bg-white text-black divide-y divide-black w-[150px] text-center">
+                            <li class="p-3 cursor-pointer hover:bg-black hover:bg-opacity-10 duration-200">Online Donation</li>
+                            <li class="p-3 cursor-pointer hover:bg-black hover:bg-opacity-10 duration-200">Salvation Story</li>
+                            <li class="p-3 cursor-pointer hover:bg-black hover:bg-opacity-10 duration-200">Prayer Request</li>
+                            <li class="p-3 cursor-pointer hover:bg-black hover:bg-opacity-10 duration-200">Ask the Pastor</li>
+                        </ul>
                     </li>
-                    <li><p>CONTACT</p></li>
+                    <li class="p-3 cursor-pointer"><p>CONTACT</p></li>
                 </ul>
             </nav>
         </div>
