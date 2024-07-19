@@ -710,6 +710,27 @@ video {
   /* font-family: "Redressed", cursive; */
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation-name: fadeInUp;
+  animation-delay: 500ms;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-direction: normal;
+  animation-fill-mode: backwards;
+}
+
 @media (min-width: 768px){
   .md\:px-14{
     padding-left: 3.5rem;

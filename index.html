@@ -2,20 +2,24 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>R.C.C.G</title>
-    <link href="./css/output.css" rel="stylesheet">
+    <link href="./css/output.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/0a85dbbf01.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet" />
 </head>
 
 <body>
     <header
         class="z-10 absolute top-0 right-0 left-0 w-full flex items-center justify-between md:px-14 md:py-4 bg-blue-500 bg-opacity-30">
         <div>
-            <h1 class="font-bold md:text-lg text-white">HIGHER GROUND <span class="text-blue-600">ASSEMBLY</span></h1>
-            <p class="text-xs italic text-[#515b6b]">Pressing Forward... Making Potentials Real</p>
+            <h1 class="font-bold md:text-lg text-white">
+                HIGHER GROUND <span class="text-blue-600">ASSEMBLY</span>
+            </h1>
+            <p class="text-xs italic text-[#515b6b]">
+                Pressing Forward... Making Potentials Real
+            </p>
         </div>
         <div>
             <nav>
@@ -34,26 +38,36 @@
     <section class="splide" aria-label="Splide Basic HTML Example">
         <div class="relative splide__track">
             <ul class="landing splide__list min-h-screen flex text-center cursor-grab">
-                <li class="text-white splide__slide flex justify-center items-center bg-[url(../images/slide1.jpg)] bg-cover bg-bottom">
-                    <div class="">
+                <li
+                    class="text-white splide__slide flex justify-center items-center bg-[url(../images/slide1.jpg)] bg-cover bg-bottom">
+                    <div class="text-content">
                         <h1 class="md:text-6xl tracking-wider">We Welcome You</h1>
                         <p class="md:text-4xl">to Higher Ground Assemble</p>
                     </div>
                 </li>
-                <li class="text-white splide__slide flex justify-center items-center bg-[url(../images/slide2.jpg)] bg-cover bg-bottom">
-                    <div class="">
-                        <h1 class="md:text-6xl tracking-wider">Loving God. Loving People</h1>
+                <li
+                    class="text-white splide__slide flex justify-center items-center bg-[url(../images/slide2.jpg)] bg-cover bg-bottom">
+                    <div class="text-content">
+                        <h1 class="md:text-6xl tracking-wider">
+                            Loving God. Loving People
+                        </h1>
                         <p class="md:text-4xl">Serving as His Church</p>
                     </div>
                 </li>
-                <li class="text-white splide__slide flex justify-center items-center bg-[url(../images/slide3.jpg)] bg-cover bg-bottom">
-                    <div class="">
-                        <h1 class="md:text-6xl tracking-wider">Ours is a growing Church</h1>
-                        <p class="md:text-4xl">Made of friendly, caring and happy people</p>
+                <li
+                    class="text-white splide__slide flex justify-center items-center bg-[url(../images/slide3.jpg)] bg-cover bg-bottom">
+                    <div class="text-content">
+                        <h1 class="md:text-6xl tracking-wider">
+                            Ours is a growing Church
+                        </h1>
+                        <p class="md:text-4xl">
+                            Made of friendly, caring and happy people
+                        </p>
                     </div>
                 </li>
-                <li class="text-white splide__slide flex justify-center items-center bg-[url(../images/slide2.jpg)] bg-cover bg-bottom">
-                    <div class="">
+                <li
+                    class="text-white splide__slide flex justify-center items-center bg-[url(../images/slide2.jpg)] bg-cover bg-bottom">
+                    <div class="text-content">
                         <h1 class="md:text-6xl tracking-wider">Pressing Forward</h1>
                         <p class="md:text-4xl">Making Potentials Real</p>
                     </div>
@@ -70,18 +84,30 @@
         </div>
     </section>
 
-
-
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-
-            let splide = new Splide('.splide', {
+        document.addEventListener("DOMContentLoaded", function () {
+            let splide = new Splide(".splide", {
                 type: "loop",
                 perPage: 1,
                 interval: 4000,
                 speed: 700,
                 autoplay: true,
                 pagination: false,
+            });
+            splide.on("mounted move", function () {
+                // Remove animation class from all slides
+                document
+                    .querySelectorAll(".splide__slide .text-content")
+                    .forEach(function (content) {
+                        content.classList.remove("fade-in-up");
+                    });
+
+                // Add animation class to the active slide
+                let activeSlide = splide.Components.Elements.slides[splide.index];
+                let textContent = activeSlide.querySelector(".text-content");
+                if (textContent) {
+                    textContent.classList.add("fade-in-up");
+                }
             });
             splide.mount();
         });
