@@ -11,20 +11,25 @@
 </head>
 
 <body>
-    <header class="z-10 absolute top-0 right-0 left-0 w-full flex items-center justify-around py-2 md:px-14 md:py-4 bg-blue-500 bg-opacity-30">
+    <header class="z-10 absolute top-0 right-0 left-0 w-full flex items-center justify-around py-2 px-4 md:px-16 md:py-4 bg-blue-500 bg-opacity-30">
         <div class=" flex-1 md:flex-auto md:block flex justify-center">
-            <div>
-                <h1 class="font-bold md:text-lg text-white">
-                    HIGHER GROUND <span class="text-blue-600">ASSEMBLY</span>
-                </h1>
-                <p class="text-xs italic text-[#515b6b]">
-                    Pressing Forward... Making Potentials Real
-                </p>
+            <div class="flex items-center gap-3">
+                <div>
+                    <img src="./images/logo.png" class="w-10 object-cover aspect-square rounded-full" alt="">
+                </div>
+                <div class="flex-1">
+                    <h1 class="font-bold md:text-lg text-white">
+                        HIGHER GROUND <span class="text-blue-600">ASSEMBLY</span>
+                    </h1>
+                    <p class="text-xs italic text-[#515b6b]">
+                        Pressing Forward... Making Potentials Real
+                    </p>
+                </div>
             </div>
         </div>
         <div class="md:block hidden">
             <nav>
-                <ul class="flex items-center gap-5 text-sm font-medium text-white">
+                <ul class="flex items-center gap-5 text-sm font-normal text-white">
                     <li>ABOUT</li>
                     <li>SERVICES</li>
                     <li>MINISTRIES</li>
@@ -36,7 +41,7 @@
             </nav>
         </div>
     </header>
-    <section class="splide" aria-label="Splide Basic HTML Example">
+    <section class="splide" aria-label="Landing Slider">
         <div class="relative splide__track">
             <ul class="landing splide__list min-h-screen flex text-center cursor-grab">
                 <li
@@ -85,8 +90,51 @@
         </div>
     </section>
 
-    <section class="min-h-screen flex justify-center items-center">
-        <h1>what happen</h1>
+    <section class="flex md:flex-row flex-col gap-10 md:py-32 px-4 md:px-20 py-4">
+        <div class="flex-1">
+            <img src="./images/slide3.jpg" class="w-full h-[400px] object-cover object-bottom" alt="">
+        </div>
+        <div class="flex-1 flex flex-col justify-between h-[700px] bg-[#424242] p-6">
+            <div>
+                <h1 class="font-bold md:text-3xl text-white">Welcome to Higher Ground Assembly</h1>
+                <p class="md:text-[22px] leading-[45px] text-sm font-light text-[#c3c3c3]">Permit me to welcome you to this entrance to information about Higher Ground Assembly, a parish of the Redeemed Christian Church of God worldwide. Ours is a growing Church made of friendly, caring and happy people. We are determined to keep pressing until your God-given potential turns to reality</p>
+            </div>
+            <p class="redressed font-light md:text-3xl text-[#e0e0e0]">- Pastor Olulana</p>
+        </div>
+    </section>
+
+    <section class="md:py-10 px-4 md:px-10 py-4">
+        <div class="bg-[#424242] grid lg:grid-cols-4 text-center p-16">
+            <div class="text-[#b3b3b3]">
+                <div class="hover:text-[#f9f9f9] hover:border-[#f9f9f9] duration-300 border-2 border-[#b3b3b3] rounded-full w-24 aspect-square text-4xl flex justify-center items-center mx-auto">
+                    <i class="fa-brands fa-envira"></i>
+                </div>
+                <h2 class="md:text-3xl my-2 font-medium">Sunday Services</h2>
+                <p>Sunday School: 9:30am</p>
+                <p>Worship Service: 10:00am - 12:00pm</p>
+            </div>
+            <div class="text-[#58bbd5]">
+                <div class="hover:text-[#b1dde9] hover:border-[#b1dde9] duration-300 border-2 border-[#58bbd5] rounded-full w-24 aspect-square text-4xl flex justify-center items-center mx-auto">
+                    <i class="fa-solid fa-handshake"></i>
+                </div>
+                <h2 class="md:text-3xl my-2 font-medium">Thanksgiving Service</h2>
+                <p>Every First Sunday of the Month: 10:00am - 12:30pm</p>
+            </div>
+            <div class="text-[#f4c61f]">
+                <div class="hover:text-[#efdea3] hover:border-[#efdea3] border-2 border-[#f4c61f] rounded-full w-24 aspect-square text-4xl flex justify-center items-center mx-auto">
+                    <i class="fa-solid fa-book"></i>
+                </div>
+                <h2 class="md:text-3xl my-2 font-medium">Bible Study</h2>
+                <p>Wednesdays: 7:00pm</p>
+            </div>
+            <div class="text-[#2eb161]">
+                <div class="hover:text-[#b5c6bb] hover:border-[#b5c6bb] border-2 border-[#2eb161] rounded-full w-24 aspect-square text-4xl flex justify-center items-center mx-auto">
+                    <i class="fa-solid fa-fire-flame-curved"></i>
+                </div>
+                <h2 class="md:text-3xl my-2 font-medium">Solutions Night</h2>
+                <p>Every Second Friday of the Month: 8:00pm - 12:00am</p>
+            </div>
+        </div>
     </section>
 
     <script>
@@ -116,7 +164,7 @@
                 if (textContent) {
                     textContent.classList.add("fade-in-up");
                 }
-                // activeSlide.classList.add('zoom-in');
+                activeSlide.classList.add('zoom-in');
             });
             splide.mount();
         });
