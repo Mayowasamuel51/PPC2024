@@ -1405,6 +1405,21 @@ video {
     padding-bottom: 8rem;
   }
 
+  .md\:py-1{
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+  }
+
+  .md\:py-4{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .md\:py-40{
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
   .md\:text-left{
     text-align: left;
   }
