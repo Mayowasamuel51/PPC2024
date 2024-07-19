@@ -35,11 +35,11 @@
         transform: scale(1);
     }
     to {
-        transform: scale(1.1);
+        transform: scale(1.2);
     }
 }
 
 .zoom-in {
-    animation: zoomIn 5s ease-out;
+    animation: zoomIn 6s ease-out;
     animation-fill-mode: forwards;
 }

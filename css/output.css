@@ -605,10 +605,6 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.cursor-grab{
-  cursor: grab;
-}
-
 .items-center{
   align-items: center;
 }
@@ -623,6 +619,10 @@ video {
 
 .gap-5{
   gap: 1.25rem;
+}
+
+.overflow-hidden{
+  overflow: hidden;
 }
 
 .bg-blue-500{
@@ -737,12 +737,12 @@ video {
   }
 
   to {
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
 }
 
 .zoom-in {
-  animation: zoomIn 5s ease-out;
+  animation: zoomIn 6s ease-out;
   animation-fill-mode: forwards;
 }
 
