@@ -667,6 +667,14 @@ video {
   height: 700px;
 }
 
+.h-\[300px\]{
+  height: 300px;
+}
+
+.h-40{
+  height: 10rem;
+}
+
 .min-h-\[200px\]{
   min-height: 200px;
 }
@@ -698,6 +706,14 @@ video {
 
 .w-full{
   width: 100%;
+}
+
+.w-\[\]{
+  width: ;
+}
+
+.w-\[100px\]{
+  width: 100px;
 }
 
 .flex-1{
@@ -1340,6 +1356,10 @@ video {
 
   .md\:w-\[800px\]{
     width: 800px;
+  }
+
+  .md\:w-\[80\%\]{
+    width: 80%;
   }
 
   .md\:grid-cols-2{
