@@ -443,7 +443,8 @@
 .project-content a {
     display: inline-block;
     padding: 20px 25px;
-    background: var(--bs-primary);
+    /* background: var(--bs-primary); */
+    background: #842281;
     border-radius: 10px;
 }
 
