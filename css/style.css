@@ -1,4 +1,23 @@
 /*** Spinner Start ***/
+.full-screen {
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    object-fit: cover; /* Ensures the image covers the entire area */
+}
+
+.carousel-inner, .carousel-item {
+    height: 100vh; /* Ensure the carousel and item also cover the full viewport height */
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 10;
+    color: #fff;
+}
+
 
 #spinner {
     opacity: 0;
