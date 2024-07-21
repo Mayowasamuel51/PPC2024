@@ -379,19 +379,20 @@
     padding: 15px;
 }
 
-.project-img::before {
+ .project-img::before {
     content: "";
     position: absolute;
     width: 150px;
     height: 150px;
     top: 0;
     left: 0;
-    background: var(--bs-secondary);
+    background: #4C145A;
     border-radius: 10px;
     opacity: 1;
     z-index: -1;
     transition: .5s;
-}
+} 
+/* background: var(--bs-secondary); */
 
 .project-img::after {
     content: "";
