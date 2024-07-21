@@ -29,6 +29,8 @@
     </head>
 
     <body>
+      
+        
         <!-- Spinner Start -->
         <div id="spinner" class="show position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-grow text-primary" role="status"></div>
@@ -156,8 +158,7 @@
             </div>
         </div>
         <!-- Carousel End -->
-
-
+      
         <!-- Fact Start -->
         <div class="container-fluid bg-secondary py-5">
             <!-- <div class="container">
@@ -935,6 +936,72 @@
 
         
         <!-- JavaScript Libraries -->
+        <script>
+
+            document.addEventListener("DOMContentLoaded", function () {
+                AOS.init();
+                let splide = new Splide(".splide", {
+                    type: "loop",
+                    perPage: 1,
+                    interval: 4000,
+                    speed: 700,
+                    autoplay: true,
+                    pagination: false,
+                });
+                splide.on("mounted move", function () {
+                    // Remove animation class from all slides
+                    document
+                        .querySelectorAll(".splide__slide .text-content")
+                        .forEach(function (content) {
+                            content.classList.remove("fade-in-up");
+                    });
+                    document.querySelectorAll('.splide__slide').forEach(function (slide) {
+                        slide.classList.remove('zoom-in');
+                    });
+    
+                    // Add animation class to the active slide
+                    let activeSlide = splide.Components.Elements.slides[splide.index];
+                    let textContent = activeSlide.querySelector(".text-content");
+                    if (textContent) {
+                        textContent.classList.add("fade-in-up");
+                    }
+                    activeSlide.classList.add('zoom-in');
+                });
+                splide.mount();
+            });
+            const dayEl = document.querySelector(".day");
+            const hourEL = document.querySelector(".hours");
+            const minEL = document.querySelector(".mins");
+            const secEL = document.querySelector(".sec");
+    
+    
+            function countDown() {
+                const futureDate = new Date('5 october 2024');
+                const presentDate = new Date();
+    
+                const diff = futureDate - presentDate;
+    
+                const seconds = (diff / 1000);
+    
+                day = Math.trunc(seconds / 3600 / 24);
+                hour= Math.trunc((seconds / 3600) % 24);
+                min = Math.trunc((seconds / 60) % 60)
+                sec = Math.trunc(seconds % 60);
+    
+                dayEl.innerHTML = day;
+                hourEL.innerHTML = formatDate(hour);
+                minEL.innerHTML = min;
+                secEL.innerHTML = formatDate(sec);
+                
+            }
+    
+            function formatDate(date) {
+                return date < 10 ? `0${date}` : date;
+            }
+            setInterval(countDown , 1000)
+        </script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
         <script src="lib/wow/wow.min.js"></script>
