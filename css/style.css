@@ -396,7 +396,7 @@
 
 .project-img::after {
     content: "";
-    width: 650px;
+    width: 150px;
     /*  width: 650px;  was 150 */
     height: 150px;
     position: absolute;
