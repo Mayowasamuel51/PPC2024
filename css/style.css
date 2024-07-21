@@ -184,14 +184,14 @@
     left: 0;
     background: rgba(0, 0, 0, .6);
 }
-
+/* 
 .carousel-caption {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1;
-}
+} */
 
 .carousel-item p {
     max-width: 700px;
