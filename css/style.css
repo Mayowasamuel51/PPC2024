@@ -655,11 +655,13 @@
 }
 
 .contact-map {
-    background: #26d48c;
+    background: #842281;
+    /* background: #26d48c; */
 }
 
 .contact-form {
-    background: #26d48c;
+    /* background: #26d48c; */
+    background: #842281;
 }
 
 /*** Contact End ***/
