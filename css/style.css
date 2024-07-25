@@ -273,7 +273,8 @@
 #carouselId .carousel-indicators li {
   width: 30px;
   height: 10px;
-  background: var(--bs-primary);
+  /* background: var(--bs-primary); */
+  background: #842281;;
   margin: 10px;
   border-radius: 30px;
   opacity: 1;
