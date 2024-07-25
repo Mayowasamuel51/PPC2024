@@ -5,10 +5,10 @@
   height: 100vh; /* Full viewport height */
   object-fit: cover; /* Ensures the image covers the entire area */
 }
-
+/* 
 .carousel-inner,
 .carousel-item {
-  height: 120vh; /* Ensure the carousel and item also cover the full viewport height */
+  height: 100vh; 
 }
 
 .carousel-caption {
@@ -18,8 +18,8 @@
   right: 20px;
   z-index: 10;
   color: #fff;
-  /* color: ; */
-}
+
+} */
 
 #spinner {
   opacity: 0;
@@ -190,14 +190,14 @@
   left: 0;
   background: rgba(0, 0, 0, 0.6);
 }
-/* 
+
 .carousel-caption {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1;
-} */
+} 
 
 .carousel-item p {
   max-width: 700px;
