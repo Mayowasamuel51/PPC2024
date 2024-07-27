@@ -167,7 +167,9 @@
   vertical-align: middle;
   margin-left: 8px;
 }
-
+.ppctext{
+  display: none;
+}
 @media (min-width: 992px) {
   .navbar .nav-item .dropdown-menu {
     display: block;
@@ -178,7 +180,11 @@
     transition: 0.5s;
     opacity: 0;
   }
+  .ppctext{
+    display: block;
+  }
 }
+
 
 .navbar .nav-item:hover .dropdown-menu {
   transform: rotateX(0deg);
