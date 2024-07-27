@@ -441,8 +441,9 @@
   position: absolute;
   right: 0;
   bottom: 0;
-  background: var(--bs-primary);
+  /* background: var(--bs-primary); */
   /* background: black; */
+  background:#8B0000 ;
   /* background: #4c145a; */
   border-radius: 10px;
   opacity: 1;
