@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <title>PPC-2024</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -12,19 +13,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Saira:wght@500;600;700&display=swap"
-      rel="stylesheet"
-    />
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Saira:wght@500;600;700&display=swap"
+        rel="stylesheet" />
 
     <!-- Icon Font Stylesheet -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
 
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet" />
@@ -35,16 +29,154 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
-  </head>
 
-  <body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <style>
+        .register-button-container {
+            margin-top: 90%;
+        }
+
+        .register-button-container-1 {
+            margin-top: 90%;
+        }
+
+        @media (max-width: 768px) {
+            .register-button-container {
+                margin-top: 90%;
+            }
+
+            .register-button-container-1 {
+                margin-top: 90%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .register-button-container {
+                margin-top: 61%;
+            }
+
+            .register-button-container-1 {
+                margin-top: 62.1%;
+            }
+        }
+
+        .countdown-number {
+            color: white;
+            font-size: 180px;
+            padding-right: 15px;
+            font-weight: 900;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.75);
+        }
+
+        .countdown-colon {
+            /* display: flex; */
+            color: white;
+            /* align-items: center; */
+            font-size: 80px;
+            padding-right: 15px;
+            font-weight: 1000;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.75);
+        }
+
+        .mycolon {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Media query for screen widths between 768px and 820px */
+
+        @media (max-width: 991px) and (min-width: 768px) {
+            /* .countdown-hide {
+    display: none !important;
+  } */
+
+
+        }
+
+        @media (max-width:800px) {
+            .time {
+                font-size: 6px;
+                /* font-weight: 1000; */
+                text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.75);
+
+            }
+
+            .countdown-number {
+                color: white;
+                font-size: 20px;
+                padding-right: 15px;
+                font-weight: 900;
+                text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.75);
+            }
+
+            .countdown-colon {
+                /* display: flex; */
+                color: white;
+                font-size: 20px;
+                /* align-items: start; */
+                padding-right: 15px;
+                font-weight: 1000;
+                text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.75);
+            }
+
+            .mycolon {
+                display: flex;
+                align-items: start;
+            }
+
+        }
+    </style>
     <!-- Spinner Start -->
-    <div
-      id="spinner"
-      class="show position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
-    >
-      <div class="spinner-grow text-primary" role="status"></div>
+    <div id="spinner"
+        class="show position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <!-- <div class="spinner-grow text-primary" role="status"></div> -->
+        <!-- <i class=" text-primary  fa-solid fa-clock"></i> -->
     </div>
+
+    <!-- Button trigger modal -->
+
+
+    <!-- Modal -->
+    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="container d-flex justify-content-center align-items-center mt-1" style="">
+            <div class="mycountdowns d-none d-md-flex flex-md-row align-items-center text-center gap-3 gap-md-4 bg-opacity-50 p-4 p-md-2 rounded shadow-md countdown-hide" style="z-index: 999999999; margin-top: 12%">
+              <div class="d-flex mt-5">
+                <div class="d-flex flex-column align-items-center">
+                  <p class="day fw-bo countdown-number">00</p>
+                  <h3 class="fw-semibold text-white h6">Days</h3>
+                </div>
+                <div class="d-flex align-items-center">
+                  <p class="colon fw-bo countdown-colon">:</p>
+                </div>
+                <div class="d-flex flex-column align-items-center">
+                  <p class="hours fw-bo countdown-number">00</p>
+                  <h1 class="fw-semibold text-white h6">Hours</h1>
+                </div>
+                <div class="d-flex align-items-center">
+                  <p class="colon fw-bo countdown-colon">:</p>
+                </div>
+                <div class="d-flex flex-column align-items-center">
+                  <p class="mins fw-bo countdown-number">00</p>
+                  <h1 class="fw-semibold text-white h6">Min</h1>
+                </div>
+                <div class="d-flex align-items-center">
+                  <p class="colon fw-bo countdown-colon">:</p>
+                </div>
+                <div class="d-flex flex-column align-items-center">
+                  <p class="sec fw-bo countdown-number">00</p>
+                  <h1 class="fw-semibold text-white h6">Sec</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div> -->
     <!-- Spinner End -->
 
     <!-- Topbar Start -->
@@ -69,26 +201,22 @@
 
     <!-- Navbar Start   bg-primary-->
     <div class="container-fluid" style="background-color: #ffffff">
-      <div class="contai">
-        <nav class="navbar d-flex align-items-center navbar-dark" style="">
-          <a href="index.html" class="navbar-brand  align-items-center">
-            <div>
-              <img
-                src="images/newfile-removebg-preview.png"
-                height="60px"
-                loading="lazy"
-                class="object-cover aspect-square rounded-full align-items-center"
-                alt=""
-              />
-            </div>
-            <!-- <h5 class="text-white fw-bold d-block">  HIGHER GROUND <span class="text-blue-600">ASSEMBLY</span>
+        <div class="container">
+            <nav class="navbar d-flex align-items-center navbar-dark d-flex  align-items-center justify-content-center"
+                style="">
+                <a href="index.html" class="navbar-brand ">
+                    <div>
+                        <img src="images/newfile-removebg-preview.png" height="60px" loading="lazy"
+                            class="object-cover aspect-square rounded-full align-items-center" alt="" />
+                    </div>
+                    <!-- <h5 class="text-white fw-bold d-block">  HIGHER GROUND <span class="text-blue-600">ASSEMBLY</span>
                           </h5>
                           <p class="text-xs italic text-[#515b6b]">
                             Pressing Forward... Making Potentials Real
                         </p> 
                        -->
-          </a>
-          <button
+                </a>
+                <!-- <button
             type="button"
             class="navbar-toggler me-0"
             data-bs-toggle="collapse"
@@ -99,8 +227,8 @@
           <div
             class="collapse navbar-collapse bg-transparent"
             id="navbarCollapse"
-          >
-            <!-- <div class="navbar-nav ms-auto mx-xl-auto p-0">
+          > -->
+                <!-- <div class="navbar-nav ms-auto mx-xl-auto p-0">
               <a
                 href="index.html"
                 class="nav-item nav-link active text-secondary"
@@ -127,28 +255,28 @@
               </div>
               <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div> -->
-          </div>
-          <div class="d-no d-xl-flex flex-shirink-0">
-            <div
+        </div>
+        <!-- <div class="d-no d-xl-flex flex-shirink-0"> -->
+        <!-- <div
               id="phone-tada"
               class="d-flex align-items-center justify-content-center me-4"
             >
               <a href="" class="position-relative animated tada infinite">
-                <!-- <i class="fa fa-phone-alt text-white fa-2x"></i> -->
-                <!-- <div class="position-absolute" style="top: -7px; left: 20px;">
+                <i class="fa fa-phone-alt text-white fa-2x"></i> 
+                <div class="position-absolute" style="top: -7px; left: 20px;">
                                     <span><i class="fa fa-comment-dots text-secondary"></i></span>
-                                </div> -->
+                                </div>
               </a>
-            </div>
-            <div class=" pt-2 pe-4 ppctext text-center">
-              <!-- <h1 class="text-center h1" style="color: #922222">
+            </div> -->
+        <!-- <div class=" pt-1 pe-4 ppctext text-center">
+              <h1 class="text-center h1" style="color: #922222">
                 Possibility Power Conference 2024
-              </h1> -->
-            </div>
-            <!-- <div class="d-flex flex-column pe-4 border-end">
+              </h1>
+            </div> -->
+        <!-- <div class="d-flex flex-column pe-4 border-end">
               <span class="text-white-50">Have any questions?</span>
             </div> -->
-            <!-- <div
+        <!-- <div
               class="d-flex align-items-center justify-content-center ms-4 pb-3"
             >
               <img
@@ -159,9 +287,9 @@
                 alt=""
               />
             </div> -->
-          </div>
+        <!-- </div> -->
         </nav>
-      </div>
+    </div>
     </div>
 
     <!-- Navbar End -->
@@ -187,167 +315,149 @@
 
     <!-- Carousel Start -->
     <!-- <div class="container-fluid px-0"> -->
-    <div class="container-fluid px-0">
-      <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
-        <ol class="carousel-indicators">
-          <li
-            data-bs-target="#carouselId"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="First slide"
-          ></li>
-          <li
-            data-bs-target="#carouselId"
-            data-bs-slide-to="1"
-            aria-label="Second slide"
-          ></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-          <div class="carousel-item active">
-            <img src="images/flyer2.jpg" class="img-fluid" alt="First slide" />
-            <div class="carousel-caption">
-              <div class="container carousel-content">
-                <h1 class="text-white display-1 mb-4 animated fadeInRight">
-                  Seeds of Greatness
-                </h1>
-                <a
-                  href="https://www.eventbrite.com/e/possibility-power-conference-2024-tickets-963828766787?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl"
-                  class="me-2 text-white"
-                >
-                  <button
-                    type="button"
-                    style="background-color: #008000"
-                    class="px-4 py-sm-3 px-sm-5 btn text-white rounded-pill carousel-content-btn1 animated fadeInLeft"
-                  >
-                    REGISTER
-                  </button>
-                </a>
-                <div
-                  class="container d-flex justify-content-center align-items-center mt-5"
-                  style="height: 2vh"
-                >
-                  <div
-                    class="countdowns d-none d-md-flex flex-md-row align-items-center text-center gap-3 gap-md-4 bg-white bg-opacity-50 p-4 p-md-4 rounded shadow-md"
-                    style="z-index: 999999999; margin-top: 12%"
-                  >
-                    <div>
-                      <p class="day display-4" style="color: #842281">00</p>
-                      <h1 class="fw-semibold h6">Days</h1>
+    <div class="container-fluid px-0  miancontainer" style="">
+        <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators mt-5">
+                <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active  " aria-current="true"
+                    aria-label="First slide"></li>
+                <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <img src="images/flyer2.jpg" class="img-fluid" alt="First slide" />
+                    <div class="carousel-caption">
+                        <div class="container carousel-content">
+                            <h1 class="text-white display-1 mb-4 animated fadeInRight mb-5">Seeds of Greatness</h1>
+                            <div class="container mt-5 d-flex justify-content-center align-items-center mt    mainpush"
+                                style="height: 2vh">
+                                <div class="countdowns d-flex flex-md-row align-items-center text-center gap-3 gap-md-4 bg-opacity-50 p-4 p-md-2 rounded shadow-md countdown-hide"
+                                    style="z-index: 999999999; margin-top: 11%">
+                                    <div class="d-flex mt-5">
+                                        <div class="d-flex flex-column align-items-center">
+                                            <p class="day fw-bo countdown-number">00</p>
+                                            <p class=" text-white  time">Days</p>
+                                        </div>
+                                        <div class=" mycolon">
+                                            <p class="colon fw-bo countdown-colon">:</p>
+                                        </div>
+                                        <div class="d-flex flex-column align-items-center">
+                                            <p class="hours fw-bo countdown-number">00</p>
+                                            <p class=" text-white time">Hours</p>
+                                        </div>
+                                        <div class="mycolon ">
+                                            <p class="colon fw-bo countdown-colon">:</p>
+                                        </div>
+                                        <div class="d-flex flex-column align-items-center">
+                                            <p class="mins fw-bo countdown-number">00</p>
+                                            <p class=" text-white time">Min</p>
+                                        </div>
+                                        <div class="mycolon">
+                                            <p class="colon fw-bo countdown-colon">:</p>
+                                        </div>
+                                        <div class="d-flex flex-column align-items-center">
+                                            <p class="sec fw-bo countdown-number">00</p>
+                                            <p class=" text-white time">Sec</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="register-button-container-1">
+                                <a href="https://www.eventbrite.com/e/possibility-power-conference-2024-tickets-963828766787?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl"
+                                    class="text-white">
+                                    <button type="button" style="background-color: #008000"
+                                        class="px-4 py-sm-2  px-sm-5 btn text-white rounded-pill carousel-content-btn1 animated fadeInLeft">REGISTER</button>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                      <p class="hours display-4" style="color: #842281">00</p>
-                      <h1 class="fw-semibold h6">Hours</h1>
-                    </div>
-                    <div>
-                      <p class="mins display-4" style="color: #842281">00</p>
-                      <h1 class="fw-semibold h6">Min</h1>
-                    </div>
-                    <div>
-                      <p class="sec display-4" style="color: #842281">00</p>
-                      <h1 class="fw-semibold h6">Sec</h1>
-                    </div>
-                  </div>
                 </div>
-                <!-- Countdown timer -->
-                <!-- <div
-                  class="d-flex justify-content-center align-items-center"
-                  style="height: 100vh"
-                >
-                  <div
-                    class="countdowns d-none d-md-flex flex-md-row align-items-center text-center gap-3 gap-md-4 bg-white bg-opacity-50 p-4 p-md-4 rounded shadow-md"
-                    style="z-index: 999999999; width: 100%; margin-top: 76%"
-                  >
-                    <div>
-                      <p class="day display-4" style="color: #842281">00</p>
-                      <h1 class="fw-semibold h6">Days</h1>
+                <div class="carousel-item">
+                    <img src="images/flyer1.jpg" class="img-fluid" alt="Second slide" />
+                    <div class="carousel-caption">
+                        <div class="container carousel-content">
+                            <br />
+                            <br />
+                            <!-- <br /> -->
+                            <br />
+                            <div class="container d-flex justify-content-center align-items-center mt-5"
+                                style="height: 2vh">
+                                <div class="countdowns d-flex flex-md-row align-items-center text-center gap-3 gap-md-4 bg-opacity-50 p-4 p-md-2 rounded shadow-md countdown-hide"
+                                    style="z-index: 999999999; margin-top: 11%">
+                                    <div class="d-flex mt-5">
+                                        <div class="d-flex flex-column align-items-center">
+                                            <p class="dayw fw-bo countdown-number">00</p>
+                                            <p class=" text-white  time">Days</p>
+                                        </div>
+                                        <div class=" mycolon">
+                                            <p class="colon fw-bo countdown-colon">:</p>
+                                        </div>
+                                        <div class="d-flex flex-column align-items-center">
+                                            <p class="hoursw fw-bo countdown-number">00</p>
+                                            <p class=" text-white time">Hours</p>
+                                        </div>
+                                        <div class="mycolon ">
+                                            <p class="colon fw-bo countdown-colon">:</p>
+                                        </div>
+                                        <div class="d-flex flex-column align-items-center">
+                                            <p class="minsw fw-bo countdown-number">00</p>
+                                            <p class=" text-white time">Min</p>
+                                        </div>
+                                        <div class="mycolon">
+                                            <p class="colon fw-bo countdown-colon">:</p>
+                                        </div>
+                                        <div class="d-flex flex-column align-items-center">
+                                            <p class="secw fw-bo countdown-number">00</p>
+                                            <p class=" text-white time">Sec</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="container d-flex justify-content-center align-items-center mt-5" style="height: 2vh">
+                        <div class="countdowns d-none d-md-flex flex-md-row align-items-center text-center gap-3 gap-md-4 bg-opacity-50 p-4 p-md-2 rounded shadow-md" style="z-index: 999999999; margin-top: 12%">
+                          <div class="d-flex mt-5">
+                            <div class="d-flex flex-column align-items-center">
+                              <p class="dayw fw-bo" style="color:white; font-size: 180px; font-weight: 800;">00</p>
+                              <h3 class="fw-semibold text-white h6">Days</h3>
+                            </div>
+                            <div class="d-flex align-items-center">
+                              <p class="colon fw-bo p-2" style="color:white; font-size: 80px; font-weight: 800;">:</p>
+                            </div>
+                            <div class="d-flex flex-column align-items-center">
+                              <p class="hoursw fw-bo" style="color:white; font-size: 180px; font-weight: 800;">00</p>
+                              <h1 class="fw-semibold text-white h6">Hours</h1>
+                            </div>
+                            <div class="d-flex align-items-center">
+                              <p class="colon fw-bo p-2" style="color:white; font-size: 80px; font-weight: 800;">:</p>
+                            </div>
+                            <div class="d-flex flex-column align-items-center">
+                              <p class="minsw fw-bo" style="color:white; font-size: 180px; font-weight: 800;">00</p>
+                              <h1 class="fw-semibold text-white h6">Min</h1>
+                            </div>
+                            <div class="d-flex align-items-center">
+                              <p class="colon fw-bo p-2" style="color:white; font-size: 80px; font-weight: 800;">:</p>
+                            </div>
+                            <div class="d-flex flex-column align-items-center">
+                              <p class="secw fw-bo" style="color:white; font-size: 180px; font-weight: 800;">00</p>
+                              <h1 class="fw-semibold text-white h6">Sec</h1>
+                            </div>
+                          </div>
+                        </div>
+                      </div> -->
+                            <div class="register-button-container ">
+                                <a href="https://www.eventbrite.com/e/possibility-power-conference-2024-tickets-963828766787?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl"
+                                    class=" text-white  me-2">
+                                    <button type="button" style="background-color: #008000"
+                                        class="px-4  py-sm-2   px-sm-5 btn text-white rounded-pill carousel-content-btn1 animated fadeInLeft">REGISTER</button>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                      <p class="hours display-4" style="color: #842281">00</p>
-                      <h1 class="fw-semibold h6">Hours</h1>
-                    </div>
-                    <div>
-                      <p class="mins display-4" style="color: #842281">00</p>
-                      <h1 class="fw-semibold h6">Min</h1>
-                    </div>
-                    <div>
-                      <p class="sec display-4" style="color: #842281">00</p>
-                      <h1 class="fw-semibold h6">Sec</h1>
-                    </div>
-                  </div>
-                </div>  -->
-              </div>
+                </div>
             </div>
-          </div>
-
-          <div class="carousel-item">
-            <img src="images/flyer1.jpg" class="img-fluid" alt="Second slide" />
-            <div class="carousel-caption">
-              <div class="container carousel-content">
-                <h1 class="text-white display-1 mb-4 animated fadeInLeft">
-                  Flourish and Inspire Others
-                </h1>
-                <a href="https://www.eventbrite.com/e/possibility-power-conference-2024-tickets-963828766787?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl" class="me-2 text-white">
-                  <button
-                    type="button"
-                    style="background-color: #008000"
-                    class="px-4 py-sm-3 px-sm-5 btn text-white rounded-pill carousel-content-btn1 animated fadeInLeft"
-                  >
-                    REGISTER
-                  </button>
-                </a>
-                <!-- Countdown timer -->
-                <!-- <div
-                  class="container d-flex justify-content-center align-items-center"
-                  style="height: 100vh"
-                >
-                  <div
-                    class="countdowns d-none d-md-flex flex-md-row align-items-center text-center gap-3 gap-md-4 bg-white bg-opacity-50 p-4 p-md-4 rounded shadow-md"
-                    style="z-index: 999999999; margin-top: 76%"
-                  >
-                    <div>
-                      <p class="day display-4" style="color: #842281">00</p>
-                      <h1 class="fw-semibold h6">Days</h1>
-                    </div>
-                    <div>
-                      <p class="hours display-4" style="color: #842281">00</p>
-                      <h1 class="fw-semibold h6">Hours</h1>
-                    </div>
-                    <div>
-                      <p class="mins display-4" style="color: #842281">00</p>
-                      <h1 class="fw-semibold h6">Min</h1>
-                    </div>
-                    <div>
-                      <p class="sec display-4" style="color: #842281">00</p>
-                      <h1 class="fw-semibold h6">Sec</h1>
-                    </div>
-                  </div>
-                </div> -->
-              </div>
-            </div>
-          </div>
         </div>
-
-        <!-- <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselId"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselId"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button> -->
-      </div>
     </div>
+
+
 
     <!-- Carousel End -->
 
@@ -385,9 +495,9 @@
     <!-- Fact End -->
 
     <div class="container-fluid py-1 my-1">
-      <div class="container pt-1">
-        <div class="">
-          <!-- <div class="col-lg-5 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".3s">
+        <div class="container pt-1">
+            <div class="">
+                <!-- <div class="col-lg-5 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".3s">
                         <div class="h-100 position-relative">
                             <img src="images/hall.jpg" class="img-fluid w-75 rounded" alt="" style="margin-bottom: 25%;">
                             <div class="position-absolute w-75" style="top: 25%; left: 25%;">
@@ -395,95 +505,75 @@
                             </div>
                         </div>
                     </div> -->
-          <!-- <div class=" wow fadeIn  object-fit-xxl-contain border rounded" data-wow-delay=".5s" >
+                <!-- <div class=" wow fadeIn  object-fit-xxl-contain border rounded" data-wow-delay=".5s" >
                         <iframe 
                         src="https://www.youtube.com/embed/ZZvTQcAYXj4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                         </iframe>
                     
                     </div> -->
-          <div class="container mt-3">
-            <div
-              class="wow fadeIn video-container border rounded"
-              data-wow-delay=".5s"
-            >
-              <iframe
-                src="https://www.youtube.com/embed/dRAWkQ07vgo"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              >
-              </iframe>
+                <div class="container mt-3">
+                    <div class="wow fadeIn video-container border rounded" data-wow-delay=".5s">
+                        <iframe src="https://www.youtube.com/embed/dRAWkQ07vgo"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
 
-    <div class="container d-block d-lg-none">
+    <!-- <div class="container d-block d-lg-none">
       <div
         class="countdowns top-0 end-0 mt-5 me-2 me-md-4 d-flex flex-column flex-md-row align-items-center text-center gap-3 gap-md-4 bg-white bg-opacity-50 p-3 p-md-4 rounded shadow-md"
         style="z-index: 999999999"
       >
         <div>
-          <p class="days display-4" style="color: #842281">00</p>
-          <h1 class="fw-semibold h4">Days</h1>
+          <p class="days display-4" style="color: #842281">00 :</p>
+          <h1 class="display-6">Days</h1>
         </div>
         <div>
-          <p class="hourss display-4" style="color: #842281">00</p>
-          <h1 class="fw-semibold h4">Hours</h1>
+          <p class="hourss display-4" style="color: #842281">00 :</p>
+          <h1 class="display-6">Hours</h1>
         </div>
         <div>
-          <p class="minss display-4" style="color: #842281">00</p>
-          <h1 class="fw-semibold h4">Min</h1>
+          <p class="minss display-4" style="color: #842281">00 :</p>
+          <h1 class="display-6">Min</h1>
         </div>
         <div>
-          <p class="secs display-4" style="color: #842281">00</p>
-          <h1 class="fw-semibold h4">Sec</h1>
+          <p class="secs display-4" style="color: #842281">00 :</p>
+          <h1 class="display-6">Sec</h1>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- About Start -->
     <div class="container-fluid py-5 my-5">
-      <div class="container pt-2">
-        <div class="row g-5">
-          <div
-            class="col-lg-5 col-md-6 col-sm-12 wow fadeIn"
-            data-wow-delay=".3s"
-          >
-            <div class="h-100 position-relative">
-              <img
-                src="images/hall.jpg"
-                class="img-fluid w-75 rounded"
-                alt=""
-                style="margin-bottom: 25%"
-              />
-              <div class="position-absolute w-75" style="top: 25%; left: 25%">
-                <img
-                  src="images/hall1.jpg"
-                  class="img-fluid w-100 rounded"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            class="col-lg-7 col-md-6 col-sm-12 wow fadeIn"
-            data-wow-delay=".5s"
-          >
-            <h5 class="text-w" style="color: #4c145a">Why Attend?</h5>
-            <p class="mb-4">
-              Join us at RCCG Higher Ground Assembly’s Possibility Power
-              Conference, a transformative event running for over 15 years.
-              Experience profound spiritual growth through impactful teachings,
-              dynamic worship, and powerful prayers. Connect with a vibrant
-              community and gain tools to unlock your God-given potential. Don’t
-              miss this life-changing opportunity!.
-            </p>
-            <!-- <p class="mb-4">Pellentesque aliquam dolor eget urna ultricies tincidunt. Nam volutpat libero sit amet leo cursus, ac viverra eros tristique. Morbi quis quam mi. Cras vel gravida eros. Proin scelerisque quam nec elementum viverra. Suspendisse viverra hendrerit diam in tempus.</p>
+        <div class="container pt-2">
+            <div class="row g-5">
+                <div class="col-lg-5 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".3s">
+                    <div class="h-100 position-relative">
+                        <img src="images/hall.jpg" class="img-fluid w-75 rounded" alt="" style="margin-bottom: 25%" />
+                        <div class="position-absolute w-75" style="top: 25%; left: 25%">
+                            <img src="images/hall1.jpg" class="img-fluid w-100 rounded" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".5s">
+                    <h5 class="text-w" style="color: #4c145a">Why Attend?</h5>
+                    <p class="mb-4">
+                        Join us at RCCG Higher Ground Assembly’s Possibility Power
+                        Conference, a transformative event running for over 15 years.
+                        Experience profound spiritual growth through impactful teachings,
+                        dynamic worship, and powerful prayers. Connect with a vibrant
+                        community and gain tools to unlock your God-given potential. Don’t
+                        miss this life-changing opportunity!.
+                    </p>
+                    <!-- <p class="mb-4">Pellentesque aliquam dolor eget urna ultricies tincidunt. Nam volutpat libero sit amet leo cursus, ac viverra eros tristique. Morbi quis quam mi. Cras vel gravida eros. Proin scelerisque quam nec elementum viverra. Suspendisse viverra hendrerit diam in tempus.</p>
                         <a href="" class="btn btn-secondary rounded-pill px-5 py-3 text-white">More Details</a> -->
-          </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
     <!-- About End -->
 
@@ -575,131 +665,101 @@
 
     <!-- Project Start -->
     <div class="container-fluid project py-5 mb-5">
-      <div class="container">
-        <div
-          class="text-center mx-auto pb-5 wow fadeIn"
-          data-wow-delay=".3s"
-          style="max-width: 600px"
-        >
-          <!-- <h5 class="text-primary">Our Project</h5> -->
-          <h1 style="background: #4c145a" class="text-white p-3 rounded-pill">
-            Ministers
-          </h1>
-        </div>
-        <div
-          class="row g-5"
-          data-aos="fade-up"
-          data-aos-offset="200"
-          data-aos-delay="50"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
-        >
-          <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".3s">
-            <div class="project-item">
-              <div class="project-img">
-                <img
-                  src="images/daddy.jpg"
-                  class="img-fluid w-100 rounded"
-                  alt=""
-                />
-                <div class="project-content">
-                  <a href="#" class="text-center">
-                    <h4 class="text-secondary text-white">
-                      Pastor Ayo Olulana
-                    </h4>
-                    <p class="m-0 text-white">
-                      SENIOR PASTOR RCCG HIGHER GROUND ASSEMBLY
-                    </p>
-                  </a>
-                </div>
-              </div>
+        <div class="container">
+            <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px">
+                <!-- <h5 class="text-primary">Our Project</h5> -->
+                <h1 style="background: #4c145a" class="text-white p-3 rounded-pill">
+                    Ministers
+                </h1>
             </div>
-          </div>
-          <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".5s">
-            <div class="project-item">
-              <div class="project-img">
-                <img
-                  src="images/mummy.jpg"
-                  class="img-fluid w-100 rounded"
-                  alt=""
-                />
-                <div class="project-content">
-                  <a href="#" class="text-center">
-                    <h4 class="text-secondary text-white">
-                      Pastor Remi Olulana
-                    </h4>
-                    <p class="m-0 text-white">
-                      SENIOR PASTOR RCCG HIGHER GROUND ASSEMBLY
-                    </p>
-                  </a>
+            <div class="row g-5" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000"
+                data-aos-easing="ease-in-out">
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".3s">
+                    <div class="project-item">
+                        <div class="project-img">
+                            <img src="images/daddy.jpg" class="img-fluid w-100 rounded" alt="" />
+                            <div class="project-content">
+                                <a href="#" class="text-center">
+                                    <h4 class="text-secondary text-white">
+                                        Pastor Ayo Olulana
+                                    </h4>
+                                    <p class="m-0 text-white">
+                                        SENIOR PASTOR RCCG HIGHER GROUND ASSEMBLY
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".7s">
-            <div class="project-item">
-              <div class="project-img">
-                <img
-                  src="images/leke.jpg"
-                  class="img-fluid w-100 rounded"
-                  alt=""
-                />
-                <div class="project-content">
-                  <a href="#" class="text-center">
-                    <h4 class="text-secondary text-white">
-                      Pastor Leke Sanusi
-                    </h4>
-                    <!-- <p class="m-0 text-white">SENIOR PASTOR -->
-                    <!-- RCCG JESUS HOUSE CHICAGO</p> -->
-                  </a>
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".5s">
+                    <div class="project-item">
+                        <div class="project-img">
+                            <img src="images/mummy.jpg" class="img-fluid w-100 rounded" alt="" />
+                            <div class="project-content">
+                                <a href="#" class="text-center">
+                                    <h4 class="text-secondary text-white">
+                                        Pastor Remi Olulana
+                                    </h4>
+                                    <p class="m-0 text-white">
+                                        SENIOR PASTOR RCCG HIGHER GROUND ASSEMBLY
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".3s">
-            <div class="project-item">
-              <div class="project-img">
-                <img
-                  src="images/blackwoman.jpg"
-                  class="img-fluid w-100 rounded"
-                  alt=""
-                />
-                <div class="project-content">
-                  <a href="#" class="text-center">
-                    <h4 class="text-secondary text-white">
-                      Pastor Funmi Obilana
-                    </h4>
-                    <p class="m-0 text-white">
-                      SENIOR PASTOR RCCG LIVING SPRING MIRACLE CENTER
-                    </p>
-                  </a>
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".7s">
+                    <div class="project-item">
+                        <div class="project-img">
+                            <img src="images/leke.jpg" class="img-fluid w-100 rounded" alt="" />
+                            <div class="project-content">
+                                <a href="#" class="text-center">
+                                    <h4 class="text-secondary text-white">
+                                        Pastor Leke Sanusi
+                                    </h4>
+                                    <!-- <p class="m-0 text-white">SENIOR PASTOR -->
+                                    <!-- RCCG JESUS HOUSE CHICAGO</p> -->
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".5s">
-            <div class="project-item">
-              <div class="project-img">
-                <img
-                  src="images/bayo.jpg"
-                  class="img-fluid w-100 rounded"
-                  alt=""
-                />
-                <div class="project-content">
-                  <a href="#" class="text-center">
-                    <h4 class="text-secondary text-white">
-                      Pastor Bayo Adewole
-                    </h4>
-                    <!-- <p class="m-0 text-white">SENIOR PASTOR
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".3s">
+                    <div class="project-item">
+                        <div class="project-img">
+                            <img src="images/blackwoman.jpg" class="img-fluid w-100 rounded" alt="" />
+                            <div class="project-content">
+                                <a href="#" class="text-center">
+                                    <h4 class="text-secondary text-white">
+                                        Pastor Funmi Obilana
+                                    </h4>
+                                    <p class="m-0 text-white">
+                                        SENIOR PASTOR RCCG LIVING SPRING MIRACLE CENTER
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".5s">
+                    <div class="project-item">
+                        <div class="project-img">
+                            <img src="images/bayo.jpg" class="img-fluid w-100 rounded" alt="" />
+                            <div class="project-content">
+                                <a href="#" class="text-center">
+                                    <h4 class="text-secondary text-white">
+                                        Pastor Bayo Adewole
+                                    </h4>
+                                    <!-- <p class="m-0 text-white">SENIOR PASTOR
                                             RCCG LIVING SPRING MIRACLE CENTER</p> -->
-                  </a>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".7s">
-            <div class="project-item">
-              <!-- <div class="project-img">
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".7s">
+                    <div class="project-item">
+                        <!-- <div class="project-img">
                                 <img src="img/project-6.jpg" class="img-fluid w-100 rounded" alt="">
                                 <div class="project-content">
                                     <a href="#" class="text-center">
@@ -708,122 +768,98 @@
                                     </a>
                                 </div>
                             </div> -->
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
     <!-- Project End -->
 
     <!-- Project Start -->
     <div class="container-fluid project py-5 mb-5">
-      <div class="container">
-        <div
-          class="text-center mx-auto pb-5 wow fadeIn"
-          data-wow-delay=".3s"
-          style="max-width: 600px"
-        >
-          <!-- <h5 class="text-primary">Our Project</h5> -->
-          <div class="border-0 p-3 rounded-pill" style="background: #4c145a">
-            <h1 class="text-white">Worship Ministers</h1>
-          </div>
-        </div>
-        <div class="row g-5">
-          <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".3s">
-            <div class="project-item">
-              <div class="project-img">
-                <img
-                  src="images/PC Pst James.jpg"
-                  class="img-fluid w-100 rounded"
-                  alt=""
-                />
-                <div class="project-content">
-                  <a href="#" class="text-center">
-                    <h4 class="text-secondary text-white">Pastor James Okon</h4>
-                    <!-- <p class="m-0 text-white">SENIOR PASTOR
+        <div class="container">
+            <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px">
+                <!-- <h5 class="text-primary">Our Project</h5> -->
+                <div class="border-0 p-3 rounded-pill" style="background: #4c145a">
+                    <h1 class="text-white">Worship Ministers</h1>
+                </div>
+            </div>
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".3s">
+                    <div class="project-item">
+                        <div class="project-img">
+                            <img src="images/PC Pst James.jpg" class="img-fluid w-100 rounded" alt="" />
+                            <div class="project-content">
+                                <a href="#" class="text-center">
+                                    <h4 class="text-secondary text-white">Pastor James Okon</h4>
+                                    <!-- <p class="m-0 text-white">SENIOR PASTOR
                                                 RCCG HIGHER GROUND ASSEMBLY</p> -->
-                  </a>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".5s">
-            <div class="project-item">
-              <div class="project-img">
-                <img
-                  src="images/PC Cosmos.jpg"
-                  class="img-fluid w-100 rounded"
-                  alt=""
-                />
-                <div class="project-content">
-                  <a href="#" class="text-center">
-                    <h4 class="text-seconda text-white">Cosmos</h4>
-                    <!-- <p class="m-0 text-white">SENIOR PASTOR -->
-                    <!-- RCCG HIGHER GROUND ASSEMBLY</p> -->
-                  </a>
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".5s">
+                    <div class="project-item">
+                        <div class="project-img">
+                            <img src="images/PC Cosmos.jpg" class="img-fluid w-100 rounded" alt="" />
+                            <div class="project-content">
+                                <a href="#" class="text-center">
+                                    <h4 class="text-seconda text-white">Cosmos</h4>
+                                    <!-- <p class="m-0 text-white">SENIOR PASTOR -->
+                                    <!-- RCCG HIGHER GROUND ASSEMBLY</p> -->
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".7s">
-            <div class="project-item">
-              <div class="project-img">
-                <img
-                  src="images/PC Josh.jpg"
-                  class="img-fluid w-100 rounded"
-                  alt=""
-                />
-                <div class="project-content">
-                  <a href="#" class="text-center">
-                    <h4 class="text-secondary text-white">Josh Blayze</h4>
-                    <!-- <p class="m-0 text-white">SENIOR PASTOR -->
-                    <!-- RCCG JESUS HOUSE CHICAGO</p> -->
-                  </a>
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".7s">
+                    <div class="project-item">
+                        <div class="project-img">
+                            <img src="images/PC Josh.jpg" class="img-fluid w-100 rounded" alt="" />
+                            <div class="project-content">
+                                <a href="#" class="text-center">
+                                    <h4 class="text-secondary text-white">Josh Blayze</h4>
+                                    <!-- <p class="m-0 text-white">SENIOR PASTOR -->
+                                    <!-- RCCG JESUS HOUSE CHICAGO</p> -->
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".3s">
-            <div class="project-item">
-              <div class="project-img">
-                <img
-                  src="images/PC Enkay.jpg"
-                  class="img-fluid w-100 rounded"
-                  alt=""
-                />
-                <div class="project-content">
-                  <a href="#" class="text-center">
-                    <h4 class="text-secondary text-white">Enkay</h4>
-                    <!-- <p class="m-0 text-white">SENIOR PASTOR -->
-                    <!-- RCCG VICTORY TEMPLE BOWIE</p> -->
-                  </a>
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".3s">
+                    <div class="project-item">
+                        <div class="project-img">
+                            <img src="images/PC Enkay.jpg" class="img-fluid w-100 rounded" alt="" />
+                            <div class="project-content">
+                                <a href="#" class="text-center">
+                                    <h4 class="text-secondary text-white">Enkay</h4>
+                                    <!-- <p class="m-0 text-white">SENIOR PASTOR -->
+                                    <!-- RCCG VICTORY TEMPLE BOWIE</p> -->
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".5s">
-            <div class="project-item">
-              <div class="project-img">
-                <img
-                  src="images/PC Lawrence.jpg"
-                  class="img-fluid w-100 rounded"
-                  alt=""
-                />
-                <div class="project-content">
-                  <a href="#" class="text-center">
-                    <h4 class="text-secondary text-white">
-                      Min Lawrence Decovenant
-                    </h4>
-                    <!-- <p class="m-0 text-white">SENIOR PASTOR -->
-                    <!-- RCCG LIVING SPRING MIRACLE CENTER</p> -->
-                  </a>
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".5s">
+                    <div class="project-item">
+                        <div class="project-img">
+                            <img src="images/PC Lawrence.jpg" class="img-fluid w-100 rounded" alt="" />
+                            <div class="project-content">
+                                <a href="#" class="text-center">
+                                    <h4 class="text-secondary text-white">
+                                        Min Lawrence Decovenant
+                                    </h4>
+                                    <!-- <p class="m-0 text-white">SENIOR PASTOR -->
+                                    <!-- RCCG LIVING SPRING MIRACLE CENTER</p> -->
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".7s">
-            <div class="project-item">
-              <!-- <div class="project-img">
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".7s">
+                    <div class="project-item">
+                        <!-- <div class="project-img">
                                     <img src="img/project-6.jpg" class="img-fluid w-100 rounded" alt="">
                                     <div class="project-content">
                                         <a href="#" class="text-center">
@@ -832,10 +868,10 @@
                                         </a>
                                     </div>
                                 </div> -->
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
     <!-- Project End -->
 
@@ -1134,164 +1170,127 @@
 
     <!-- Contact Start -->
     <div class="container-fluid py-5 mb-5">
-      <div class="container">
-        <div
-          class="text-center mx-auto pb-5 wow fadeIn"
-          data-wow-delay=".3s"
-          style="max-width: 600px"
-        >
-          <h5 class="text-prim" style="color: #4c145a">Get In Touch</h5>
-          <!-- <h1 class="mb-3">Contact for any query</h1>
+        <div class="container">
+            <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px">
+                <h5 class="text-prim" style="color: #4c145a">Get In Touch</h5>
+                <!-- <h1 class="mb-3">Contact for any query</h1>
                     <p class="mb-2">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p> -->
-        </div>
-        <div class="contact-detail position-relative p-5">
-          <div class="row g-5 mb-5 justify-content-center">
-            <div class="col-xl-4 col-lg-6 wow fadeIn" data-wow-delay=".3s">
-              <div class="d-flex bg-light p-3 rounded">
-                <!-- <div class="flex-shrink-0 btn-square bg-secondary rounded-circle" style="width: 64px; height: 64px;">
+            </div>
+            <div class="contact-detail position-relative p-5">
+                <div class="row g-5 mb-5 justify-content-center">
+                    <div class="col-xl-4 col-lg-6 wow fadeIn" data-wow-delay=".3s">
+                        <div class="d-flex bg-light p-3 rounded">
+                            <!-- <div class="flex-shrink-0 btn-square bg-secondary rounded-circle" style="width: 64px; height: 64px;">
                                     <i class="fas fa-map-marker-alt text-white"></i>
                                 </div> -->
-                <!-- <div class="ms-3">
+                            <!-- <div class="ms-3">
                                     <h4 class="text-primary">Address</h4>
                                     <a href="https://goo.gl/maps/Zd4BCynmTb98ivUJ6" target="_blank" class="h5">23 rank Str, NY</a>
                                 </div> -->
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-6 wow fadeIn" data-wow-delay=".5s">
-              <div class="d-flex bg-light p-3 rounded">
-                <!-- <div class="flex-shrink-0 btn-square bg-secondary rounded-circle" style="width: 64px; height: 64px;">
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 wow fadeIn" data-wow-delay=".5s">
+                        <div class="d-flex bg-light p-3 rounded">
+                            <!-- <div class="flex-shrink-0 btn-square bg-secondary rounded-circle" style="width: 64px; height: 64px;">
                                     <i class="fa fa-phone text-white"></i>
                                 </div> -->
-                <!-- <div class="ms-3">
+                            <!-- <div class="ms-3">
                                     <h4 class="text-primary">Call Us</h4>
                                     <a class="h5" href="tel:+0123456789" target="_blank">+012 3456 7890</a>
                                 </div> -->
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-6 wow fadeIn" data-wow-delay=".7s">
-              <div class="d-flex bg-light p-3 rounded">
-                <!-- <div class="flex-shrink-0 btn-square bg-secondary rounded-circle" style="width: 64px; height: 64px;">
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 wow fadeIn" data-wow-delay=".7s">
+                        <div class="d-flex bg-light p-3 rounded">
+                            <!-- <div class="flex-shrink-0 btn-square bg-secondary rounded-circle" style="width: 64px; height: 64px;">
                                     <i class="fa fa-envelope text-white"></i>
                                 </div>
                                 <div class="ms-3">
                                     <h4 class="text-primary">Email Us</h4>
                                     <a class="h5" href="mailto:info@example.com" target="_blank">info@example.com</a>
                                 </div> -->
-              </div>
-            </div>
-          </div>
-          <div class="row g-5">
-            <div class="col-lg-12 wow fadeIn" data-wow-delay=".3s">
-              <div class="p-2 h-100 rounded contact-map">
-                <iframe
-                  class="rounded w-100 h-100"
-                  style="border: 0"
-                  allowfullscreen=""
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.4911625044265!2d-76.7620656842668!3d39.31753377948963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c817d2ff4ebc29%3A0x14b84b2d45d3b7e8!2s2021%20Lord%20Baltimore%20Dr%2C%20Windsor%20Mill%2C%20MD%2021244%2C%20USA!5e0!3m2!1sen!2sbd!4v1686493221834!5m2!1sen!2sbd"
-                  width="600"
-                  height="450"
-                  style="border: 0"
-                  allowfullscreen=""
-                  loading="lazy"
-                ></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-5">
+                    <div class="col-lg-12 wow fadeIn" data-wow-delay=".3s">
+                        <div class="p-2 h-100 rounded contact-map">
+                            <iframe class="rounded w-100 h-100" style="border: 0" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.4911625044265!2d-76.7620656842668!3d39.31753377948963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c817d2ff4ebc29%3A0x14b84b2d45d3b7e8!2s2021%20Lord%20Baltimore%20Dr%2C%20Windsor%20Mill%2C%20MD%2021244%2C%20USA!5e0!3m2!1sen!2sbd!4v1686493221834!5m2!1sen!2sbd"
+                                width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
 
-                <!-- <iframe class="rounded w-100 h-100" src style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
-              </div>
+                            <!-- <iframe class="rounded w-100 h-100" src style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-12 wow fadeIn" data-wow-delay=".5s">
+                        <div class="p-2 rounded contact-form">
+                            <div class="mb-4">
+                                <input type="text" class="form-control border-0 py-3" placeholder="Your Name" />
+                            </div>
+                            <div class="mb-4">
+                                <input type="email" class="form-control border-0 py-3" placeholder="Your Email" />
+                            </div>
+                            <div class="mb-4">
+                                <input type="text" class="form-control border-0 py-3"
+                                    placeholder="PrayPoint/Questions" />
+                            </div>
+                            <div class="mb-4">
+                                <textarea class="w-100 form-control border-0 py-3" rows="6" cols="10"
+                                    placeholder="Message"></textarea>
+                            </div>
+                            <div class="text-start">
+                                <button class="btn bg-white text-black py-3 px-5" type="button">
+                                    Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-12 wow fadeIn" data-wow-delay=".5s">
-              <div class="p-2 rounded contact-form">
-                <div class="mb-4">
-                  <input
-                    type="text"
-                    class="form-control border-0 py-3"
-                    placeholder="Your Name"
-                  />
-                </div>
-                <div class="mb-4">
-                  <input
-                    type="email"
-                    class="form-control border-0 py-3"
-                    placeholder="Your Email"
-                  />
-                </div>
-                <div class="mb-4">
-                  <input
-                    type="text"
-                    class="form-control border-0 py-3"
-                    placeholder="PrayPoint/Questions"
-                  />
-                </div>
-                <div class="mb-4">
-                  <textarea
-                    class="w-100 form-control border-0 py-3"
-                    rows="6"
-                    cols="10"
-                    placeholder="Message"
-                  ></textarea>
-                </div>
-                <div class="text-start">
-                  <button
-                    class="btn bg-white text-black py-3 px-5"
-                    type="button"
-                  >
-                    Send Message
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
     <!-- Contact End -->
 
     <!-- Footer Start -->
     <div class="container-fluid footer bg-dark wow fadeIn" data-wow-delay=".3s">
-      <div class="container pt-5 pb-4">
-        <div class="row g-5">
-          <div class="col-lg-3 col-md-6">
-            <a href="index.html">
-              <h1 class="text-white fw-bold d-block">
-                SOCIALS
-                <!-- <span class="text-secondary">Tech</span> </h1> -->
-              </h1>
-            </a>
-            <p class="mt-4 text-light">
-              <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta facere delectus qui placeat inventore consectetur repellendus optio debitis. -->
-            </p>
-            <div class="d-flex hightech-link">
-              <a
-                href="https://www.facebook.com/HigherGroundAssemblyBaltimore/?ref=bookmarks"
-                class="btn-light nav-fill btn btn-square rounded-circle me-2"
-                ><i class="fab fa-facebook-f text-primary"></i
-              ></a>
-              <a
-                href="https://www.youtube.com/channel/UCnZIMNOOp8fYKGvZ20CaFwA/videos?view_as=subscriber"
-                class="btn-light nav-fill btn btn-square rounded-circle me-2"
-                ><i class="fab fa-youtube text-primary"></i
-              ></a>
-              <a
-                href="https://www.instagram.com/rccg_hga/"
-                class="btn-light nav-fill btn btn-square rounded-circle me-2"
-                ><i class="fab fa-instagram text-primary"></i
-              ></a>
-              <!-- <a href="" class="btn-light nav-fill btn btn-square rounded-circle me-0"><i class="fab fa-linkedin-in text-primary"></i></a> -->
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <!-- <a href="#" class="h3 text-secondary">Short Link</a>
+        <div class="container pt-5 pb-4">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <a href="index.html">
+                        <h1 class="text-white fw-bold d-block">
+                            SOCIALS
+                            <!-- <span class="text-secondary">Tech</span> </h1> -->
+                        </h1>
+                    </a>
+                    <p class="mt-4 text-light">
+                        <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta facere delectus qui placeat inventore consectetur repellendus optio debitis. -->
+                    </p>
+                    <div class="d-flex hightech-link">
+                        <a href="https://www.facebook.com/HigherGroundAssemblyBaltimore/?ref=bookmarks"
+                            class="btn-light nav-fill btn btn-square rounded-circle me-2"><i
+                                class="fab fa-facebook-f text-primary"></i></a>
+                        <a href="https://www.youtube.com/channel/UCnZIMNOOp8fYKGvZ20CaFwA/videos?view_as=subscriber"
+                            class="btn-light nav-fill btn btn-square rounded-circle me-2"><i
+                                class="fab fa-youtube text-primary"></i></a>
+                        <a href="https://www.instagram.com/rccg_hga/"
+                            class="btn-light nav-fill btn btn-square rounded-circle me-2"><i
+                                class="fab fa-instagram text-primary"></i></a>
+                        <!-- <a href="" class="btn-light nav-fill btn btn-square rounded-circle me-0"><i class="fab fa-linkedin-in text-primary"></i></a> -->
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <!-- <a href="#" class="h3 text-secondary">Short Link</a>
                         <div class="mt-4 d-flex flex-column short-link">
                             <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>About us</a>
                             <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Contact us</a>
                             <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Our Services</a>
                             <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Our Projects</a>
                             <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Latest Blog</a> -->
-            <!-- </div> -->
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <!-- <a href="#" class="h3 text-secondary">Help Link</a>
+                    <!-- </div> -->
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <!-- <a href="#" class="h3 text-secondary">Help Link</a>
                         <div class="mt-4 d-flex flex-column help-link">
                             <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Terms Of use</a>
                             <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Privacy Policy</a>
@@ -1299,185 +1298,233 @@
                             <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>FQAs</a>
                             <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Contact</a>
                         </div> -->
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <a href="#" class="h3" style="color: #4c145a">Contact Us</a>
-            <div class="text-white mt-4 d-flex flex-column contact-link">
-              <a href="#" class="pb-3 text-light border-bottom border-primary"
-                ><i
-                  style="color: #4c145a"
-                  class="fas fa-map-marker-alt me-2"
-                ></i>
-                2021 LORD BALTIMORE DRIVE . WINDSOR MILL ,MD 21244 USA</a
-              >
-              <a href="#" class="py-3 text-light border-bottom border-primary"
-                ><i class="fas fa-phone-alt me-2" style="color: #4c145a"></i>
-                [410] 944-3323</a
-              >
-              <a href="#" class="py-3 text-light border-bottom border-primary"
-                ><i class="fas fa-envelope me-2" style="color: #4c145a"></i>
-                ADMIN@RCCGHIGHERGROUND.ORG</a
-              >
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <a href="#" class="h3" style="color: #4c145a">Contact Us</a>
+                    <div class="text-white mt-4 d-flex flex-column contact-link">
+                        <a href="#" class="pb-3 text-light border-bottom border-primary"><i style="color: #4c145a"
+                                class="fas fa-map-marker-alt me-2"></i>
+                            2021 LORD BALTIMORE DRIVE . WINDSOR MILL ,MD 21244 USA</a>
+                        <a href="#" class="py-3 text-light border-bottom border-primary"><i
+                                class="fas fa-phone-alt me-2" style="color: #4c145a"></i>
+                            [410] 944-3323</a>
+                        <a href="#" style="font-size: 9px; font-weight: 800;"
+                            class="py-3 text-light  border-bottom border-primary"><i class="fas fa-envelope me-2"
+                                style="color: #4c145a"></i>
+                            ADMIN@RCCGHIGHERGROUND.ORG</a>
+                    </div>
+                </div>
             </div>
-          </div>
+            <hr class="text-light mt-5 mb-4" />
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start" style="color: #4c145a">
+                    <span style="color: #4c145a" class="text-light"><a href="#" class="" class="text-light"
+                            style="color: #842281"><i class="fas fa-copyright me-2"></i>PPC2024</a>, All right
+                        reserved.</span>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                    <!-- <span class="text-light">Designed By<a href="https://htmlcodex.com" class="text-secondary">HTML Codex</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a></span> -->
+                </div>
+            </div>
         </div>
-        <hr class="text-light mt-5 mb-4" />
-        <div class="row">
-          <div
-            class="col-md-6 text-center text-md-start"
-            style="color: #4c145a"
-          >
-            <span style="color: #4c145a" class="text-light"
-              ><a href="#" class="" class="text-light" style="color: #842281"
-                ><i class="fas fa-copyright me-2"></i>PPC2024</a
-              >, All right reserved.</span
-            >
-          </div>
-          <div class="col-md-6 text-center text-md-end">
-            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-            <!-- <span class="text-light">Designed By<a href="https://htmlcodex.com" class="text-secondary">HTML Codex</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a></span> -->
-          </div>
-        </div>
-      </div>
     </div>
     <!-- Footer End -->
 
     <!-- Back to Top -->
-    <a
-      href="#"
-      class="btn btn-square rounded-circle back-to-top"
-      style="background-color: #4c145a"
-      ><i class="fa fa-arrow-up text-white"></i
-    ></a>
+    <a href="#" class="btn btn-square rounded-circle back-to-top" style="background-color: #4c145a"><i
+            class="fa fa-arrow-up text-white"></i></a>
 
     <!-- <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script> -->
     <!-- JavaScript Libraries -->
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        AOS.init();
-        let splide = new Splide(".splide", {
-          type: "loop",
-          perPage: 1,
-          interval: 4000,
-          speed: 700,
-          autoplay: true,
-          pagination: false,
-        });
-        splide.on("mounted move", function () {
-          // Remove animation class from all slides
-          document
-            .querySelectorAll(".splide__slide .text-content")
-            .forEach(function (content) {
-              content.classList.remove("fade-in-up");
+        document.addEventListener("DOMContentLoaded", function () {
+            AOS.init();
+            let splide = new Splide(".splide", {
+                type: "loop",
+                perPage: 1,
+                interval: 4000,
+                speed: 700,
+                autoplay: true,
+                pagination: false,
             });
-          document.querySelectorAll(".splide__slide").forEach(function (slide) {
-            slide.classList.remove("zoom-in");
-          });
+            splide.on("mounted move", function () {
+                // Remove animation class from all slides
+                document
+                    .querySelectorAll(".splide__slide .text-content")
+                    .forEach(function (content) {
+                        content.classList.remove("fade-in-up");
+                    });
+                document.querySelectorAll(".splide__slide").forEach(function (slide) {
+                    slide.classList.remove("zoom-in");
+                });
 
-          // Add animation class to the active slide
-          let activeSlide = splide.Components.Elements.slides[splide.index];
-          let textContent = activeSlide.querySelector(".text-content");
-          if (textContent) {
-            textContent.classList.add("fade-in-up");
-          }
-          activeSlide.classList.add("zoom-in");
+                // Add animation class to the active slide
+                let activeSlide = splide.Components.Elements.slides[splide.index];
+                let textContent = activeSlide.querySelector(".text-content");
+                if (textContent) {
+                    textContent.classList.add("fade-in-up");
+                }
+                activeSlide.classList.add("zoom-in");
+            });
+            splide.mount();
         });
-        splide.mount();
-      });
-      const dayEl = document.querySelector(".day");
-      const hourEL = document.querySelector(".hours");
-      const minEL = document.querySelector(".mins");
-      const secEL = document.querySelector(".sec");
+        const dayEl = document.querySelector(".day");
+        const hourEL = document.querySelector(".hours");
+        const minEL = document.querySelector(".mins");
+        const secEL = document.querySelector(".sec");
 
-      function countDown() {
-        const futureDate = new Date("11 august 2024");
-        const presentDate = new Date();
+        function countDown() {
+            const futureDate = new Date("11 august 2024");
+            const presentDate = new Date();
 
-        const diff = futureDate - presentDate;
+            const diff = futureDate - presentDate;
 
-        const seconds = diff / 1000;
+            const seconds = diff / 1000;
 
-        day = Math.trunc(seconds / 3600 / 24);
-        hour = Math.trunc((seconds / 3600) % 24);
-        min = Math.trunc((seconds / 60) % 60);
-        sec = Math.trunc(seconds % 60);
+            day = Math.trunc(seconds / 3600 / 24);
+            hour = Math.trunc((seconds / 3600) % 24);
+            min = Math.trunc((seconds / 60) % 60);
+            sec = Math.trunc(seconds % 60);
 
-        dayEl.innerHTML = day;
-        hourEL.innerHTML = formatDate(hour);
-        minEL.innerHTML = min;
-        secEL.innerHTML = formatDate(sec);
-      }
+            dayEl.innerHTML = day;
+            hourEL.innerHTML = formatDate(hour);
+            minEL.innerHTML = min;
+            secEL.innerHTML = formatDate(sec);
+        }
 
-      function formatDate(date) {
-        return date < 10 ? `0${date}` : date;
-      }
-      setInterval(countDown, 1000);
+        function formatDate(date) {
+            return date < 10 ? `0${date}` : date;
+        }
+        setInterval(countDown, 1000);
     </script>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        AOS.init();
-        let splide = new Splide(".splide", {
-          type: "loop",
-          perPage: 1,
-          interval: 4000,
-          speed: 700,
-          autoplay: true,
-          pagination: false,
-        });
-        splide.on("mounted move", function () {
-          // Remove animation class from all slides
-          document
-            .querySelectorAll(".splide__slide .text-content")
-            .forEach(function (content) {
-              content.classList.remove("fade-in-up");
+        document.addEventListener("DOMContentLoaded", function () {
+            AOS.init();
+            let splide = new Splide(".splide", {
+                type: "loop",
+                perPage: 1,
+                interval: 4000,
+                speed: 700,
+                autoplay: true,
+                pagination: false,
             });
-          document.querySelectorAll(".splide__slide").forEach(function (slide) {
-            slide.classList.remove("zoom-in");
-          });
+            splide.on("mounted move", function () {
+                // Remove animation class from all slides
+                document
+                    .querySelectorAll(".splide__slide .text-content")
+                    .forEach(function (content) {
+                        content.classList.remove("fade-in-up");
+                    });
+                document.querySelectorAll(".splide__slide").forEach(function (slide) {
+                    slide.classList.remove("zoom-in");
+                });
 
-          // Add animation class to the active slide
-          let activeSlide = splide.Components.Elements.slides[splide.index];
-          let textContent = activeSlide.querySelector(".text-content");
-          if (textContent) {
-            textContent.classList.add("fade-in-up");
-          }
-          activeSlide.classList.add("zoom-in");
+                // Add animation class to the active slide
+                let activeSlide = splide.Components.Elements.slides[splide.index];
+                let textContent = activeSlide.querySelector(".text-content");
+                if (textContent) {
+                    textContent.classList.add("fade-in-up");
+                }
+                activeSlide.classList.add("zoom-in");
+            });
+            splide.mount();
         });
-        splide.mount();
-      });
-      const dayEls = document.querySelector(".days");
-      const hourELs = document.querySelector(".hourss");
-      const minELs = document.querySelector(".minss");
-      const secELs = document.querySelector(".secs");
+        const dayEls = document.querySelector(".days");
+        const hourELs = document.querySelector(".hourss");
+        const minELs = document.querySelector(".minss");
+        const secELs = document.querySelector(".secs");
 
-      function countDown() {
-        const futureDate = new Date("11 august 2024");
-        const presentDate = new Date();
+        function countDown() {
+            const futureDate = new Date("11 august 2024");
+            const presentDate = new Date();
 
-        const diff = futureDate - presentDate;
+            const diff = futureDate - presentDate;
 
-        const seconds = diff / 1000;
+            const seconds = diff / 1000;
 
-        day = Math.trunc(seconds / 3600 / 24);
-        hour = Math.trunc((seconds / 3600) % 24);
-        min = Math.trunc((seconds / 60) % 60);
-        sec = Math.trunc(seconds % 60);
+            day = Math.trunc(seconds / 3600 / 24);
+            hour = Math.trunc((seconds / 3600) % 24);
+            min = Math.trunc((seconds / 60) % 60);
+            sec = Math.trunc(seconds % 60);
 
-        dayEls.innerHTML = day;
-        hourELs.innerHTML = formatDate(hour);
-        minELs.innerHTML = min;
-        secELs.innerHTML = formatDate(sec);
-      }
+            dayEls.innerHTML = day;
+            hourELs.innerHTML = formatDate(hour);
+            minELs.innerHTML = min;
+            secELs.innerHTML = formatDate(sec);
+        }
 
-      function formatDate(date) {
-        return date < 10 ? `0${date}` : date;
-      }
-      setInterval(countDown, 1000);
+        function formatDate(date) {
+            return date < 10 ? `0${date}` : date;
+        }
+        setInterval(countDown, 1000);
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            AOS.init();
+            let splide = new Splide(".splide", {
+                type: "loop",
+                perPage: 1,
+                interval: 4000,
+                speed: 700,
+                autoplay: true,
+                pagination: false,
+            });
+            splide.on("mounted move", function () {
+                // Remove animation class from all slides
+                document
+                    .querySelectorAll(".splide__slide .text-content")
+                    .forEach(function (content) {
+                        content.classList.remove("fade-in-up");
+                    });
+                document.querySelectorAll(".splide__slide").forEach(function (slide) {
+                    slide.classList.remove("zoom-in");
+                });
+
+                // Add animation class to the active slide
+                let activeSlide = splide.Components.Elements.slides[splide.index];
+                let textContent = activeSlide.querySelector(".text-content");
+                if (textContent) {
+                    textContent.classList.add("fade-in-up");
+                }
+                activeSlide.classList.add("zoom-in");
+            });
+            splide.mount();
+        });
+        const dayElsw = document.querySelector(".dayw");
+        const hourELsw = document.querySelector(".hoursw");
+        const minELsw = document.querySelector(".minsw");
+        const secELsw = document.querySelector(".secw");
+
+        function countDown() {
+            const futureDate = new Date("11 august 2024");
+            const presentDate = new Date();
+
+            const diff = futureDate - presentDate;
+
+            const seconds = diff / 1000;
+
+            day = Math.trunc(seconds / 3600 / 24);
+            hour = Math.trunc((seconds / 3600) % 24);
+            min = Math.trunc((seconds / 60) % 60);
+            sec = Math.trunc(seconds % 60);
+
+            dayElsw.innerHTML = day;
+            hourELsw.innerHTML = formatDate(hour);
+            minELsw.innerHTML = min;
+            secELsw.innerHTML = formatDate(sec);
+        }
+
+        function formatDate(date) {
+            return date < 10 ? `0${date}` : date;
+        }
+        setInterval(countDown, 1000);
     </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init();
+        AOS.init();
     </script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -1491,5 +1538,6 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-  </body>
+</body>
+
 </html>
